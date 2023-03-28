@@ -1,0 +1,140 @@
+/* Para ser usado na rotina cadastro do Projeto Cadastro */
+
+body{
+  font-family: "Open Sans";
+  background-color: gray;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-size: 2.6em;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 1px;
+}
+
+fieldset{
+  background-color: rgb(187, 172, 172);
+  width: 50%;
+  height: 40%;
+  padding-top:10px;
+  padding-bottom:25px;
+  padding-left:20px;
+  padding-right:5px;
+  border: 2px outset rgb(41, 39, 39);
+  border-radius: 15px;
+  margin: auto;
+}
+
+#cadastro label{
+  position:relative;
+  margin-right:5px;
+}
+
+#cadastro input.nome_completo{
+  width: 550px;
+  height: 25px;
+  margin-bottom: 4px;
+}
+
+#cadastro input.email{
+  width: 550px;
+  height: 25px;
+  margin-left: 76px;
+  margin-bottom: 4px;
+}
+
+#cadastro input.telefone{
+  width: 220px;
+  height: 25px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 59px;
+  margin-bottom: 4px;
+}
+
+#cadastro input.sexoM{
+  font-size: 1.5em;
+  margin-left: 82px;
+}
+
+#cadastro input.sexoF{
+  font-size: 1.5em;
+  margin-left: 130px;
+}
+
+#cadastro select.estado{
+  width: 230px;
+  height: 30px;
+  font-size: 1.1em;
+  margin-top: 4px;
+  margin-left: 70px;
+  margin-bottom: 4px;
+}
+
+#cadastro input.cidade{
+  width: 222px;
+  height: 25px;
+  font-size: 1.1em;
+  margin-left: 69px;
+  margin-bottom: 4px;
+}
+
+#cadastro input.data_nasc{
+  width: 225px;
+  height: 25px;
+  font-size: 1.1em;
+  text-align: center;
+  margin-left: -8px;
+  margin-bottom: 4px;
+  font-size: 1.5em;
+}
+
+#cadastro select.estado-civil{
+  width: 230px;
+  height: 30px;
+  font-size: 1.1em;
+  margin-left:35px;
+}
+  
+fieldset > legend{
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: bold;
+}
+
+ textarea{
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: 150px;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 50px;
+  width: 80%;
+  font-family: Trebuchet MS;
+}
+
+#cadastro input.enviar{
+  background-color: rgb(186, 145, 224);
+  border-radius: 10px;
+  font-weight: bold;
+  margin-left: 70px;
+  cursor: pointer;
+}
+
+#cadastro input.enviar:hover{
+  background-color: rgb(218, 212, 225);
+}
+
+#cadastro input.limpar{
+  background-color: rgb(186, 145, 224);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cadastro input.limpar:hover{
+  background-color: rgb(218, 212, 225);
+}

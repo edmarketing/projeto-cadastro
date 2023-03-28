@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar do word</title>
+    <link rel="stylesheet" href="estilos/estilow.css">
+</head>
+<body>
+    <h1>Cadastrando cliente do word</h1>
+
+    <div id="novoCliente">
+        <form action="#">
+            <label for="lbNumero">Número:</label>
+            <input type="text" id="txtNumero" style="width:250px" /><br />
+            <label for="lbNome">Nome:</label>
+            <input type="text" id="txtNome" style="width:250px" /><br />
+            <label for="lbSexo">Sexo:</label>
+            <input type="radio" name="sexo" value="masculino">Masculino
+            <input type="radio" name="sexo" value="feminino">Feminino <br />
+            <label for="lbDataNasc">Data Nascimento:</label>
+            <input type="date" id="dataNasc" /><br />
+            <input type="button" id="criarCliente" class="botaoOperacao" value="Criar" onclick="javascript: criarCliente();" />
+            <input type="reset" id="cancelar" class="botaoOperacao" value="Cancelar"/>
+        </form>
+    </div>
+
+</body>
+</html>

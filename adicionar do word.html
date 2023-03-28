@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar do word</title>
+</head>
+<body>
+    <h1>Adicionando cliente do word</h1>
+
+    var clientes = [];
+
+var txtNumero = document.getElementById("txtNumero");
+var txtNome= document.getElementById("txtNome");
+var rbSexos = document.getElementsByName('rbSexos');
+var txtDataNasc = document.getElementById("txtDataNasc");
+
+var tmplLinha = document.getElementById("tmplLinha");
+var tbody = document.getElementsByTagName("tbody")[0];
+var btCriarCliente = document.getElementById("btCriarCliente");
+
+isNullOrWhiteSpace = function (str) {
+    return !str || str.trim().length == 0;
+}
+
+btCriarCliente.onclick = function () {
+    var cliente = {};    
+    var sexo = ""
+    var novaLinha = document.createElement('tr');    
+    for (var i = 0; i < rbSexos.length; i++) {
+        if (rbSexos[i].checked) {
+            sexo = rbSexos[i].value;
+        }
+    }
+
+    cliente = {
+        Numero: parseInt(txtNumero.value),
+        Nome: txtNome.value,
+        Sexo: sexo,
+        DataNasc: new Date(txtDataNasc.value),
+    }
+
+    if (isNaN(cliente.Numero) || isNullOrWhiteSpace(cliente.Nome) || isNullOrWhiteSpace(cliente.Sexo) || isNaN(cliente.DataNasc.getTime())) {
+        return;
+    }
+
+    for (var indice in clientes) {
+        if (clientes[indice].Numero == cliente.Numero) {
+            return;
+        }
+    }
+
+    clientes.push(cliente);
+
+    novaLinha.innerHTML = tmplLinha.innerHTML;
+    for (var indice in novaLinha.childNodes) {
+        var celula = novaLinha.childNodes[indice];
+        if (celula.nodeType == 1) {            
+            switch(celula.dataset.column) {
+                case "Numero": celula.innerHTML = cliente.Numero.toString(); break;
+                case "Nome": celula.innerHTML = cliente.Nome; break;
+                case "Sexo": celula.innerHTML = cliente.Sexo; break;
+                case "DataNasc": celula.innerHTML = cliente.DataNasc.toDateString(); break;                
+            }
+        }
+    }
+
+    tbody.appendChild(novaLinha);
+    return;
+}
+
+</body>
+</html>

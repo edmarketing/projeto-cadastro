@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/logoejm.ico" type="image/x-icon">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form id="cadastro" autocomplete="off">
+        <fieldset>
+            <legend>Dados Cadastrais</legend>
+            <label for="inome">Nome Completo:</label>
+            <input class="nome_completo" type="text" name="nome" id="inome"><br>
+            <label for="iemail">E-mail:</label>
+            <input class="email" type="email" name="email" id="iemail"  autocomplete="email" required><br>
+            <label for="itel">Telefone: </label>
+            <input class="telefone" type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4,5}$" required placeholder="(xx)xxxx-xxxx"><br>
+                <!--Estudar mais sobre o RegEx -->
+            <label for="isex">Sexo:</label>
+            <input class="sexoM" type="radio" name="genero"> Masculino<br>
+            <input class="sexoF" type="radio" name="genero"> Feminino<br>
+            <input="sex" name="sex" id="isex">
+            <label for="iest">Estado:</label>
+            <select class="estado">
+                    <option>Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                    <option>Bahia</option>
+                    <option>Pernambuco</option>
+                    <option>Amazonas</option>
+                </select><br>
+            <input="est" name="est" id="iest">
+            <label for="icid">Cidade:</label>
+            <input class="cidade" type="cid" name="cid" id="icid"><br>
+            <label for="idate">Data Nascimento:</label>
+            <input class="data_nasc" type="date" placeholder="dd/mm/aaaa" name="date" id="idate"><br>
+            <label for="iestciv">Estado Civil:</label>
+                <select class="estado-civil">
+                    <option>Solteiro</option>
+                    <option>Casado</option>
+                    <option>Divorciado</option>
+                    <option>Viúvo</option>
+                </select>
+            <input="estciv" name="estciv" id="iestciv"> 
+            </p>
+                <textarea placeholder="Conte-nos sobre você"></textarea>
+            </p>
+            <Input class="enviar" type="submit" value="Enviar">
+            <input class="limpar" type="reset" value="Limpar">
+        </fieldset>
+     </form>
+</body>
+</html>

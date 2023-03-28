@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo cadastro do word</title>
+    <link rel="stylesheet" href="estilos/estilow.css">
+</head>
+<body>
+    <h1>Novo cadastro de cliente do word</h1>
+
+<form action="#">
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="lbNumero">Número:</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="text" id="txtNumero" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="lbNome">Nome:</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="text" id="txtNome" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-3 columns">
+            <label for="lbSexo">Sexo:</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="radio" name="rbSexos" value="masculino" />Masculino
+            <input type="radio" name="rbSexos" value="feminino" />Feminino
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-3 columns">    
+            <label for="lbDataNasc">Data Nascimento:</label>
+        </div>
+        <div class="small-9 columns">
+            <input type="date" id="txtDataNasc" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-3 columns">   
+        </div>
+        <div class="small-9 columns">   
+            <input type="button" id="btCriarCliente" class="button small" value="Criar" />
+            <input type="reset" id="btCancelar" class="button small" value="Cancelar"/>
+        </div>
+    </div>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Data Nasc.</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+</html>
