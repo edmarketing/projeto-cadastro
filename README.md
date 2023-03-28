@@ -1,2 +1,2 @@
 # projeto-cadastro
- Projetos para cadastrar clientes.
+ Projeto para cadastrar clientes.
